@@ -6,25 +6,16 @@ import com.opensymphony.xwork2.ActionSupport;
 
 import java.util.List;
 
-public class ListAction extends ActionSupport {
-    private List<Bangsach> products;
+public class DeleteAction extends ActionSupport {
+    private int id;
 
     public String execute() {
         BookDAO dao = new BookDAO();
-        products = dao.getAllBook();
-        if (products.size() > 0) {
+        if (dao.deleteBook(id)) {
             return "success";
         }else {
             return "bad";
         }
 
-    }
-
-    public List<Bangsach> getProducts() {
-        return products;
-    }
-
-    public void setProducts(List<Bangsach> products) {
-        this.products = products;
     }
 }

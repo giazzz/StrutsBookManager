@@ -3,6 +3,7 @@ package com.nguyentv.entity;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "tacgia")
@@ -25,6 +26,17 @@ public class Tacgia {
 
     @Column(name = "Email")
     private String email;
+
+    @OneToMany(mappedBy = "tacgia")
+    private List<Bangsach> listBook;
+
+    public List<Bangsach> getListBook() {
+        return listBook;
+    }
+
+    public void setListBook(List<Bangsach> listBook) {
+        this.listBook = listBook;
+    }
 
     public Integer getMaTg() {
         return maTg;

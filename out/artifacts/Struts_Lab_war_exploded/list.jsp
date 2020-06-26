@@ -45,9 +45,8 @@
             <td><s:property value="tacgia.TenTacGia" /></td>
             <td><s:property value="tacgia.Email" /></td>
             <td>
-                <s:a href="">Edit</s:a>
-                <s:a href="delete">Delete</s:a>
-
+                <a href="">Edit</a>
+                <a href="">Delete</a>
             </td>
         </tr>
     </s:iterator>

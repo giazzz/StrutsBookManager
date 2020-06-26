@@ -23,6 +23,18 @@ public class Bangsach {
     @Column(name = "MaTG")
     private Integer maTg;
 
+    @ManyToOne
+    @JoinColumn(name = "maTg")
+    private Tacgia tacgia;
+
+    public Tacgia getTacgia() {
+        return tacgia;
+    }
+
+    public void setTacgia(Tacgia tacgia) {
+        this.tacgia = tacgia;
+    }
+
     public Integer getMaSach() {
         return maSach;
     }
